@@ -12,6 +12,7 @@ body {
   background-color: #0a0a0a;
   color: #f0f0f0;
   font-size: 18px;
+  line-height: 1.6;
 }
 
 nav {
@@ -20,16 +21,28 @@ nav {
   display: flex;
   justify-content: center;
   gap: 30px;
+  box-shadow: 0 5px 20px rgba(0, 255, 225, 0.15);
+  position: relative;
+  z-index: 10;
 }
 
 nav a {
   color: #ccc;
   text-decoration: none;
   font-size: 1.1rem;
+  position: relative;
 }
 
-nav a:hover {
-  color: #fff;
+nav a:hover::after {
+  content: "→ узнать подробнее";
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background-color: #00ffe1;
+  color: #000;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
 }
 
 .hero {
@@ -111,5 +124,27 @@ footer {
   color: #666;
   position: relative;
   z-index: 1;
-  box-shadow: 0 -10px 30px rgba(0, 255, 225, 0.1);
+  box-shadow: 0 -20px 30px rgba(0, 255, 225, 0.1);
+}
+
+/* Toggle language */
+#language-toggle {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  background-color: transparent;
+  color: #00ffe1;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Обучение-план (раскрывающийся) */
+.training-plan {
+  display: none;
+  margin-top: 20px;
+}
+
+.training-plan.active {
+  display: block;
 }

@@ -71,7 +71,7 @@ h2 {
 .block:hover {
   transform: scale(1.015);
 }
-.block h3 {
+.block h3, .block h4 {
   color: #fff;
   margin-bottom: 10px;
 }

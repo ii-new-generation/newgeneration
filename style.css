@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+}
+nav {
+  background-color: #111;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+}
+nav a:hover {
+  color: #fff;
+}
+.hero {
+  height: 90vh;
+  background: url('img/hero_ai.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero h1, .hero p {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+  border-left: 5px solid #00ffe1;
+  padding-left: 15px;
+}
+.block {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+.block:hover {
+  transform: scale(1.015);
+}
+.block h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.block p {
+  color: #bbb;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  font-size: 0.9rem;
+  color: #666;
+}
